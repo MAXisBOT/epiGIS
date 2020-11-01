@@ -5,7 +5,7 @@ var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	esriWorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 		attribution: 'Tiles &copy; Esri'
 	}),
-	hereMaps = L.tileLayer('https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/512/png8?apiKey=i_GB9Z3NuOfYFUxwFtSP8mx8cu-k0HA2dHz1hnabuTw', {
+	hereMaps = L.tileLayer('https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/512/png8?apiKey=k_aL4JuFPk5E_CXCfLGwOI1T_Fi-pP0YdmdIKzkHnJ8', {
 		attribution: '&copy; HERE 2019',
 		minZoom: 1,
 		maxZoom: 19
@@ -34,7 +34,7 @@ legend.onAdd = function (map) {
 	var div = L.DomUtil.create('div', 'info legend');
 	var labels = [];
 
-	$.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1h2rM0l-iR2iLKENr-Dcls9CPXb3CakyugUGstInbLGo/values/Sheet2!A2:F1000?majorDimension=ROWS&key=AIzaSyDlA4RsSOnFtzbS-03GSqjGWgCg2q1jlpU', function (response) {
+	$.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1VP-uzrnMsYiYCoEnMtdxqnaJEjmS1tAF0fP4H6QeSnw/values/Sheet2!A2:F1000?majorDimension=ROWS&key=AIzaSyCJ67Rth2nDM0_0hkqDi219qDOtZrtC4gA', function (response) {
 		response.values.forEach(getMarkerColor);
 		function getMarkerColor(element) {
 			if (!typesArraySecond.includes(element[3])) {
@@ -212,7 +212,7 @@ xhttp.onreadystatechange = function () {
 								}
 								polygonHoverStyle.color = borderColorTwo;
 								//////////////
-								
+
 								e.target.setStyle(polygonHoverStyle);
 							},
 							click: function (e) {
@@ -245,7 +245,7 @@ xhttp.onreadystatechange = function () {
 	}
 };
 
-xhttp.open("GET", "https://sheets.googleapis.com/v4/spreadsheets/1h2rM0l-iR2iLKENr-Dcls9CPXb3CakyugUGstInbLGo/values/Sheet1?majorDimension=ROWS&key=AIzaSyDlA4RsSOnFtzbS-03GSqjGWgCg2q1jlpU", true);
+xhttp.open("GET", "https://sheets.googleapis.com/v4/spreadsheets/1VP-uzrnMsYiYCoEnMtdxqnaJEjmS1tAF0fP4H6QeSnw/values/Sheet1?majorDimension=ROWS&key=AIzaSyCJ67Rth2nDM0_0hkqDi219qDOtZrtC4gA", true);
 
 
 
@@ -259,7 +259,7 @@ var typesArray = [];
 var lyrMarkerCluster = L.markerClusterGroup({ showCoverageOnHover: false }).addTo(map);
 
 function drawPoints() {
-	$.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1h2rM0l-iR2iLKENr-Dcls9CPXb3CakyugUGstInbLGo/values/Sheet2!A2:I1000?majorDimension=ROWS&key=AIzaSyDlA4RsSOnFtzbS-03GSqjGWgCg2q1jlpU', function (response) {
+	$.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1VP-uzrnMsYiYCoEnMtdxqnaJEjmS1tAF0fP4H6QeSnw/values/Sheet2!A2:I1000?majorDimension=ROWS&key=AIzaSyCJ67Rth2nDM0_0hkqDi219qDOtZrtC4gA', function (response) {
 		lyrMarkerCluster.clearLayers();
 		response.values.forEach(drawMarker);
 
@@ -272,7 +272,7 @@ function drawPoints() {
 			var latitude = element[5].split(",")[0];
 			var longitude = element[5].split(",")[1];
 			var geoAddress = element[6];
-			
+
 
 			if (!typesArray.includes(type)) {
 				typesArray.push(type)
