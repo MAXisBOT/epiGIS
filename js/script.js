@@ -78,7 +78,7 @@ zoomHome.setHomeZoom(14)
 zoomHome.addTo(map);
 
 var attribution = map.attributionControl;
-attribution.setPrefix('&copy; <a target="_blank" href="http://geocadder.bg/en/portfolio.html">GEOCADDER</a>');
+attribution.setPrefix('&copy; <a target="_blank" href="Ahmed Ibrahim Alhazmi">Salhaba & Sabia Aljadeda PHCC</a>');
 
 
 // here we declare an array just for the polygons from the Google Sheets table
