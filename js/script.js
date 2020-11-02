@@ -1,12 +1,12 @@
 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	attribution: 'Ahmed Ibrahim Alhazmi'
 }),
 	esriWorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-		attribution: 'Tiles &copy; Esri'
+		attribution: 'Ahmed Ibrahim Alhazmi'
 	}),
 	hereMaps = L.tileLayer('https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/512/png8?apiKey=k_aL4JuFPk5E_CXCfLGwOI1T_Fi-pP0YdmdIKzkHnJ8', {
-		attribution: '&copy; HERE 2019',
+		attribution: 'Ahmed Ibrahim Alhazmi',
 		minZoom: 1,
 		maxZoom: 19
 	});
@@ -78,7 +78,7 @@ zoomHome.setHomeZoom(14)
 zoomHome.addTo(map);
 
 var attribution = map.attributionControl;
-attribution.setPrefix('&copy; <a target="_blank" href="Ahmed Ibrahim Alhazmi">Salhaba & Sabia Aljadeda PHCC</a>');
+attribution.setPrefix('Salhaba & Sabia Aljadeda PHCC');
 
 
 // here we declare an array just for the polygons from the Google Sheets table
